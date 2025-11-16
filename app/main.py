@@ -11,7 +11,6 @@ def download_nltk_packages():
         try:
             nltk.data.find(f'corpora/{package}' if package == 'stopwords' else f'tokenizers/{package}')
         except LookupError:
-            st.info(f"Mengunduh paket NLTK yang diperlukan: {package}...")
             nltk.download(package)
 
 download_nltk_packages()
