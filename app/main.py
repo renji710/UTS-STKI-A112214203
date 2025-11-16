@@ -1,6 +1,20 @@
 import streamlit as st
 import sys
 import os
+import nltk
+
+@st.cache_resource
+def download_nltk_packages():
+    
+    packages = ['stopwords', 'punkt', 'punkt_tab']
+    for package in packages:
+        try:
+            nltk.data.find(f'corpora/{package}' if package == 'stopwords' else f'tokenizers/{package}')
+        except LookupError:
+            st.info(f"Mengunduh paket NLTK yang diperlukan: {package}...")
+            nltk.download(package)
+
+download_nltk_packages()
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.search import SearchEngine
