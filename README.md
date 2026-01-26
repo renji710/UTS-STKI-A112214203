@@ -6,6 +6,14 @@ Korpus data yang digunakan adalah kumpulan 10 artikel Wikipedia berbahasa Indone
 
 ---
 
+## Dibuat oleh
+
+-   **Nama:** Raditya Abdul Afeef
+-   **NIM:** A11.2022.14203
+
+
+---
+
 ###  Fitur Utama
 
 -   **Pencarian Berbasis Relevansi:** Menggunakan Vector Space Model (VSM) dengan pembobotan TF-IDF dan perankingan Cosine Similarity untuk menemukan dokumen yang paling relevan.
